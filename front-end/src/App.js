@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/users">
+        <Route path="/">
           <User />
         </Route>
         <Route path="/places/new">
