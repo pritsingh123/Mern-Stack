@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/places/new">
             <NewPlace />
           </Route>
-          <Redirect to="/" />
+          {/* <Redirect to="/" /> */}
         </Switch>
       </main>
     </Router>
