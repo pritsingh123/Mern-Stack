@@ -23,7 +23,7 @@ export const PlaceList = (props) => {
           image={place.imageUrl}
           title={place.title}
           description={place.description}
-          addresses={place.addresses}
+          addresses={place.address}
           userId={place.userId}
           coordinates={place.location}
         />
