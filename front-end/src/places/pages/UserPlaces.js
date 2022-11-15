@@ -11,7 +11,7 @@ const DUMMY_PLACES = [
     imageUrl:
       "https://cdn.britannica.com/98/94398-050-FBE19E2C/Skyscrapers-Singapore.jpg",
     address: "20 W 34th St., New York, NY 10001, United States",
-    location: { lat: 40.7484, lng: 73.9857 },
+    location: { lat: 43.648768, lng: -79.728264 },
     userId: "u1",
   },
 
