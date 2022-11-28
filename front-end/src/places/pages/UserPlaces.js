@@ -2,6 +2,7 @@ import React from "react";
 
 import { useParams } from "react-router-dom";
 import PlaceList from "../components/PlaceList";
+import Button from "../../shared/components/FormElememts/Button";
 
 const DUMMY_PLACES = [
   {
@@ -14,7 +15,6 @@ const DUMMY_PLACES = [
     location: { lat: 43.648768, lng: -79.728264 },
     userId: "u1",
   },
-
   {
     id: "p2",
     title: "building 2",
