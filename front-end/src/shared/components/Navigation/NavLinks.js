@@ -24,10 +24,12 @@ export const NavLinks = (props) => {
           <NavLink to="/places/new">New Place</NavLink>
         </li>
       )}
-      {!auth.isLoggIn && (
+      {!auth.isLoggIn ? (
         <li>
           <NavLink to="/auth">Authenticate</NavLink>
         </li>
+      ) : (
+        <button onClick={auth.logout}>LOGOUT</button>
       )}
     </ul>
   );
