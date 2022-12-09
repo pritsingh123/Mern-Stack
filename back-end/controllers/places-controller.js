@@ -53,7 +53,9 @@ const createPlace = (req, res, next) => {
 
   DUMMY_PLACES.push(createdPlace);
 
-  res.status(201).json({ place: createdPlace });
+  res
+    .status(201)
+    .json({ success: true, place: createdPlace, dummyplaces: DUMMY_PLACES });
 };
 
 const updatePlace = (req, res, next) => {
@@ -77,7 +79,21 @@ const updatePlace = (req, res, next) => {
   });
 };
 
-const deletePlace = (req, res, next) => {};
+const deletePlace = (req, res, next) => {
+  const placeId = req.params.pid;
+
+  const placeIndex = DUMMY_PLACES.findIndex((p) => p.id === placeId);
+
+  DUMMY_PLACES.splice(placeIndex, 1);
+
+  res
+    .status(200)
+    .json({
+      success: true,
+      message: "Place Deleted Successfully",
+      dummyplaces: DUMMY_PLACES,
+    });
+};
 
 exports.getPlaceById = getPlaceById;
 exports.getPlaceByUserId = getPlaceByUserId;
